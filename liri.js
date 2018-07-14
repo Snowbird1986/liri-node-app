@@ -20,7 +20,8 @@ inquirer.prompt([
     {
       type: "password",
       message: "Input Password",
-      name: "password"
+      name: "password",
+      default:"password"
     },
     {
       type: "list",
