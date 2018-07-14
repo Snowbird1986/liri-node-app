@@ -20,6 +20,9 @@ switch (process.argv[2]) {
         });
         break;
     case `spotify-this-song`:
+        if(process.argv[3]==undefined){
+            process.argv[3]="Something to be proud of"
+        }
         spotify.search({ type: 'track', query: process.argv[3], limit:1 }, function(err, data) {
             if (err) {
             return console.log('Error occurred: ' + err);
@@ -33,6 +36,9 @@ switch (process.argv[2]) {
         });
         break;
     case `movie-this`:
+        if(process.argv[3]==undefined){
+            process.argv[3]="Fireproof"
+        }
         request("http://www.omdbapi.com/?t="+process.argv[3]+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
 
         // If the request is successful (i.e. if the response status code is 200)
