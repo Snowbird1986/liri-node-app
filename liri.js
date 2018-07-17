@@ -10,7 +10,7 @@ var client = new Twitter(keys.twitter);
 
 // console.log(process.argv[2])
 // console.log(process.argv[3])
-
+debugger;
 inquirer.prompt([
     {
       type: "input",
@@ -46,7 +46,8 @@ inquirer.prompt([
       if (answers.password=="password") {
         //   console.log("\nWelcome " + answers.username);
         //   console.log("\nYou want to search for "+answers.searchType+".");
-          console.log(answers.searchName)
+        //   console.log(answers.searchName)
+          debugger;
         
         switch (answers.searchType) {
             case 'my-tweets':
